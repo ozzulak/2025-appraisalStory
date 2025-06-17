@@ -18,7 +18,11 @@
 
 intro_and_consent = """## Welcome to our the first appraisals exploration study bot.
 
+In this task you’re going to engage with a prototype chatbot that asks you to think about a challenging experience you've gone through recently. \
 
+Please do not share any information that can be used to identify you or anyone else.
+
+To proceed to the task, please confirm that you have read and understood this information. 
 
 """
 
