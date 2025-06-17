@@ -16,14 +16,10 @@
 # This is the text that will be shown on the first page
 [consent]
 
-intro_and_consent = """## Welcome to our the first DataDonation exploration study bot.
+intro_and_consent = """## Welcome to our the first appraisals exploration study bot.
 
-In this task you’re going to engage with a prototype chatbot. It will ask you imagine how you, as a researcher, could benefit from datasets data donations that young provide. 
 
-*How could this look like?* 
-The data donation platform will hold data from hundreds of youth, who will have provided time-series data on their social media use, the websites they visit, as well as potentially self-report of their mood and wellbeing.
 
-In what follows, we will want to create a simple story: if this were available, how could you use it? What is the most powerful study you can imagine you would love to run if you had this data; but cannot run without it?
 """
 
 
@@ -31,28 +27,27 @@ In what follows, we will want to create a simple story: if this were available, 
 # You can put in as many questions as you like
 [collection]
 
-persona = "You're a trained psychology professor who is helping his colleagues think through study designs."
+persona = "You're a trained psychologist who is trying to elicit an emotional story from a participant."
 
-language_type = "Use researcher-friendly language while maintaining a descriptive tone; do not judge their ideas. Match the tone of the researcher."
+language_type = "Use friendly language while maintaining a descriptive tone."
 
 intro = """
-Hi and welcome -- I'm here to help identify the most exciting research project you could do if you imagine that every single interaction that a young people have with their phone over the last month will be captured and donated into the smartData infrastructure, as a way of supporting research into online harms?  I'll ask you a series of questions and then compile your answers into one coherent narrative. 
+Hi and welcome -- I'm here ask you about a time when you had experienced a challenging emotional situation in your daily life. It can be really small or serious, maybe you've processed it already, or you are still processing it. I would like to know how you feel and think about it. 
 
 Let me know when you're ready to start.
 """
 
 questions = [
-    "What specific aspect of online behaviours or impacts are you most interested in investigating?",
-    "What would be the most important outcome variable context of your research question? How would you define it / measure it?",
-    "What contextual information about the young person might be important to consider alongside the traces of their digital interactions?",
-    "Why was this study not possible before? What about the donated data would allow you to address this question?",
-    "If you're successful, how could your research help young people, in the long run?",
-    "And what could go wrong?"
+    "Can you walk me through a specific situation that felt emotionally challenging or significant for you recently? I'd like to understand the details - who was involved and why this particular moment felt important or stuck with you.",
+    "Is there anything else we should know about the situation or why it felt important for you? ",
+    "What specific emotions came up during and after this happened? And what went through your mind in those moments - what thoughts seemed to trigger or intensify these feelings?",
+    "How did you find yourself reacting or responding after this situation? What did you do with those feelings and thoughts?", 
+    "Looking back at this situation, how would you have liked to think, feel, or respond in that situation in an ideal world?"
 ]
 
 
 topic_restriction = """
-Politely ask the researcher to stay on topic if they introduce entirely different areas of conversation. 
+Politely ask the participant to stay on topic if they suggest to stop answering the questions or suggest entirely different areas of conversation. 
 """
 
 
@@ -60,26 +55,21 @@ Politely ask the researcher to stay on topic if they introduce entirely differen
 [summaries]
 
 [summaries.questions]
-target = "What specific aspect of online behaviours or impacts are you most interested in investigating?"
-variable = "What would be the most important outcome variable context of your research question and how would it be defined or  measured?"
-context = "What contextual information will be important to collect?"
-novelty = "Why was this study not possible before? What about the donated data would allow you to address this question?"
-outcome = "If you're successful, how could your research help young people, in the long run?"
-premortem = "And what could go wrong?"
+situation = "A description of the specific situation that felt emotionally challenging or significant for you recently?"
+context = "What else should we know about the situation"
+cognition = "What specific emotions and thoughts came up for you and how did it affect the feelings? "
+posthoc = "How did you find yourself reacting or responding after this situation? What did you do with those feelings and thoughts?"
+hope = "In hindsight, how would you have liked to think, feel, or respond in that situation in an ideal world?"
 
 [summaries.personas]
 
-formal = """
-You're an expert researcher working in the domain of investigating the impact of social media and online harms. Your aim is to develop a set of stories following the same pattern. \
-Based on your colleague's answers to the six questions, you  create a narrative that summarises their idea well, always using the same format. Remain formal, precise, and descriptive in your story. Ensure that you capture their  ideas accurately. 
+prompt_psychologist = """You are an experienced cognitive behavioural psychologist that is trying to help the person understand more about their emotions. You try to interpret how they are feeling, make sense of their feelings, and add information about why they might feel that way. You also interpret how their feelings are linked to the situations and thoughts in their life, to help understand more about the source of these emotions. Your language is empathic and focused on increasing their understanding of emotions. You always try to stay as close as possible to wording the person used themselves."""
+
+prompt_close_friend2 = """You are a close friend who wants to help someone understand their feelings better. You try to retell their story with specific focus on how they were feeling and why.  Use a simple, everyday informal language.
 """
 
-sibling = """
-You're an 15 year old student, who is excited about translating research ideas in ways that your peers can understand. Based on a researcher's answers to six questions, you create a narrative always using the same format. You ensure that you capture the core ideas accurately, but you retell in words that young people like you would understand. Use the framing of 'the researchers would like to...' rather that 'I' language. 
-"""
-
-goth = """
-You're an expert ethicist working in the domain of investigating the ethics of research on social media and online harms. Based on a researcher's answers to six questions, you create a narrative always using the same format. You ensure that you capture the core ideas accurately, but you retell it in ways that would amplify any ethical risks / concerns that you would have. Use the framing of 'the researchers would like to...' rather that 'I' language.
+prompt_book_author = """You're a 23 year old listening to difficult experiences that your friends have been through in their life. \ 
+Based on the answers to a series of questions, you then create a scenario that summarises your experiences well, always using the same format.
 """
 
 
