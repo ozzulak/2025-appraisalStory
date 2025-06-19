@@ -46,7 +46,7 @@ questions = [
     "Is there anything else we should know about the situation or why it felt important for you? ",
     "What specific emotions came up during and after this happened? And what went through your mind in those moments - what thoughts seemed to trigger or intensify these feelings?",
     "How did you find yourself reacting or responding after this situation? What did you do with those feelings and thoughts?", 
-    "Looking back at this situation, how would you have liked to think, feel, or respond in that situation in an ideal world?"
+    "And finally, was there anything you would have liked to do differently?"
 ]
 
 
@@ -63,7 +63,7 @@ situation = "A description of the specific situation that felt emotionally chall
 context = "What else should we know about the situation"
 cognition = "What specific emotions and thoughts came up for you and how did it affect the feelings? "
 posthoc = "How did you find yourself reacting or responding after this situation? What did you do with those feelings and thoughts?"
-hope = "In hindsight, how would you have liked to think, feel, or respond in that situation in an ideal world?"
+hope = "Was there anything you would have liked to do differently?"
 
 [summaries.personas]
 
